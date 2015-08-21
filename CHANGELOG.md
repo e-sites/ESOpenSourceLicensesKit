@@ -1,9 +1,19 @@
 # Change Log
-All notable changes to this project will be documented in this file. `ESOpenSourceKit` adheres to [Semantic Versioning](http://semver.org/).
+All notable changes to this project will be documented in this file. `ESOpenSourceLicensesKit` adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.3](https://github.com/e-sites/ESOpenSourceKit/releases/tag/1.1) / 2015-08-21
+## [1.3.3](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.3.2) / 2015-08-21
+- Renamed to `ESOpenSourceLicensesKit`
+
+## [1.3.2](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.3.2) / 2015-08-21
+- (Again) improved inline documentation
+
+## [1.3.1](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.3.1) / 2015-08-21
+- Improved inline documentation
+- Added Objc support
+
+## [1.3](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.3) / 2015-08-21
 - Transferred to (swift-only) `ESOpenSourceKit`
 
 ## 1.2 / 2015-08-19

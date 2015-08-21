@@ -5,7 +5,7 @@ if [ ! -d "Pods" ]; then
 fi
 
 # Get save path
-FILE="Pods/ESOpenSourceKit/ESOpenSourceKit/Resources/opensource-licenses.html"
+FILE="Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Resources/opensource-licenses.html"
 if [ ! -f $FILE ]; then
   FILE="license.html"
 fi

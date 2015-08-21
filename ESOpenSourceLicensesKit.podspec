@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name           = "ESOpenSourceKit"
-  s.version        = "1.3"
+  s.name           = "ESOpenSourceLicensesKit"
+  s.version        = "1.3.4"
   s.platform       = :ios, "8.0"
   s.summary        = "A bash script to generate an HTML file of all the license files used with your CocoaPods Project"
   s.author         = { "Bas van Kuijck" => "bas@e-sites.nl" }
@@ -12,15 +12,8 @@ Pod::Spec.new do |s|
   s.requires_arc   = true
   s.frameworks    = 'UIKit', 'Foundation'
 
-  s.default_subspec = 'Swift'
+  s.preserve_paths = "#{s.name}/Scripts/*.*"
+  s.resource_bundles = { 'ESOpenSourceLicensesKit' => [ 'ESOpenSourceLicensesKit/Resources/opensource-licenses.html' ] }
 
-  s.subspec 'Core' do |sp|
-    sp.preserve_paths = "#{s.name}/Scripts/*.*"
-    sp.resource_bundles = { 'ESOpenSourceKit' => [ 'ESOpenSourceKit/Resources/opensource-licenses.html' ] }
-  end
-
-  s.subspec 'Swift' do |sp|
-    sp.dependency 'ESOpenSourceKit/Core'
-    sp.source_files  = "#{s.name}/Classes/*.{swift}"
-  end
+  s.source_files  = "#{s.name}/Classes/*.{swift}"
 end

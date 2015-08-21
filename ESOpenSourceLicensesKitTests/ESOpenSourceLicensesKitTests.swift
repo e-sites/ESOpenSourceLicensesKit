@@ -1,6 +1,6 @@
 //
-//  ESOpenSourceKitTests.swift
-//  ESOpenSourceKit
+//  ESOpenSourceLicensesKitTests.swift
+//  ESOpenSourceLicensesKit
 //
 //  Created by Bas van Kuijck on 21-08-15.
 //  Copyright (c) 2015 e-sites. All rights reserved.
@@ -10,15 +10,21 @@ import Foundation
 import UIKit
 import XCTest
 
-class ESOpenSourceKitTests : XCTestCase {
+class ESOpenSourceLicensesKitTests : XCTestCase {
 
+    /**
+    Test if the ESOpenSourceLicensesViewController works
+    */
     func testViewController() {
-        let vc = ESOpenSourceKitViewController()
+        let vc = ESOpenSourceLicensesViewController()
         XCTAssertNotNil(vc.openSourceLicensesView)
     }
     
+    /**
+    Test if ESOpenSourceLicensesView works
+    */
     func testView() {
-        let v = ESOpenSourceKitView()
+        let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
         XCTAssert(v.dataDetectorTypes == .None)
         let expectation = self.expectationWithDescription("javascript-check")
@@ -33,8 +39,11 @@ class ESOpenSourceKitTests : XCTestCase {
         }
     }
     
-    func testColors() {
-        let v = ESOpenSourceKitView()
+    /**
+    Test ESOpenSourceLicensesView colors and appearance
+    */
+    func testViewStyle() {
+        let v = ESOpenSourceLicensesView()
         var rgba = _rgbaFromUIColor(v.backgroundColor!)
         XCTAssertNotNil(rgba)
         

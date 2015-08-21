@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		DFB0AAD11B846F7A0010265C /* opensource-licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = DFB0AAD01B846F7A0010265C /* opensource-licenses.html */; };
 		DFB0AAD21B846F7A0010265C /* opensource-licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = DFB0AAD01B846F7A0010265C /* opensource-licenses.html */; };
-		DFD8D8881B873BD900A628FD /* ESOpenSourceKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8861B873BD900A628FD /* ESOpenSourceKitView.swift */; };
-		DFD8D8891B873BD900A628FD /* ESOpenSourceKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8871B873BD900A628FD /* ESOpenSourceKitViewController.swift */; };
-		DFD8D88D1B873C8900A628FD /* ESOpenSourceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D88C1B873C8900A628FD /* ESOpenSourceKitTests.swift */; };
-		DFD8D88E1B873CBB00A628FD /* ESOpenSourceKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8861B873BD900A628FD /* ESOpenSourceKitView.swift */; };
-		DFD8D88F1B873CBB00A628FD /* ESOpenSourceKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8871B873BD900A628FD /* ESOpenSourceKitViewController.swift */; };
+		DFD8D8881B873BD900A628FD /* ESOpenSourceLicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8861B873BD900A628FD /* ESOpenSourceLicensesView.swift */; };
+		DFD8D8891B873BD900A628FD /* ESOpenSourceLicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8871B873BD900A628FD /* ESOpenSourceLicensesViewController.swift */; };
+		DFD8D88D1B873C8900A628FD /* ESOpenSourceLicensesKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D88C1B873C8900A628FD /* ESOpenSourceLicensesKitTests.swift */; };
+		DFD8D88E1B873CBB00A628FD /* ESOpenSourceLicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8861B873BD900A628FD /* ESOpenSourceLicensesView.swift */; };
+		DFD8D88F1B873CBB00A628FD /* ESOpenSourceLicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8D8871B873BD900A628FD /* ESOpenSourceLicensesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DFB0AA9D1B846F050010265C /* ESOpenSourceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ESOpenSourceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB0AA9D1B846F050010265C /* ESOpenSourceLicensesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ESOpenSourceLicensesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB0AAA11B846F050010265C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFB0AAA81B846F060010265C /* ESOpenSourceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESOpenSourceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFB0AAAE1B846F060010265C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB0AAA81B846F060010265C /* ESOpenSourceLicensesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESOpenSourceLicensesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB0AAAE1B846F060010265C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ESOpenSourceLicensesKitTests/Info.plist; sourceTree = "<group>"; };
 		DFB0AAD01B846F7A0010265C /* opensource-licenses.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "opensource-licenses.html"; sourceTree = "<group>"; };
-		DFB0AAD81B84725F0010265C /* ESOpenSourceKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESOpenSourceKit.h; sourceTree = "<group>"; };
-		DFD8D8861B873BD900A628FD /* ESOpenSourceKitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESOpenSourceKitView.swift; sourceTree = "<group>"; };
-		DFD8D8871B873BD900A628FD /* ESOpenSourceKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESOpenSourceKitViewController.swift; sourceTree = "<group>"; };
-		DFD8D88C1B873C8900A628FD /* ESOpenSourceKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESOpenSourceKitTests.swift; sourceTree = "<group>"; };
+		DFB0AAD81B84725F0010265C /* ESOpenSourceLicensesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESOpenSourceLicensesKit.h; sourceTree = "<group>"; };
+		DFD8D8861B873BD900A628FD /* ESOpenSourceLicensesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESOpenSourceLicensesView.swift; sourceTree = "<group>"; };
+		DFD8D8871B873BD900A628FD /* ESOpenSourceLicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESOpenSourceLicensesViewController.swift; sourceTree = "<group>"; };
+		DFD8D88C1B873C8900A628FD /* ESOpenSourceLicensesKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ESOpenSourceLicensesKitTests.swift; path = ESOpenSourceLicensesKitTests/ESOpenSourceLicensesKitTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		DFB0AA931B846F050010265C = {
 			isa = PBXGroup;
 			children = (
-				DFB0AA9F1B846F050010265C /* ESOpenSourceKit */,
+				DFB0AA9F1B846F050010265C /* ESOpenSourceLicensesKit */,
 				DFB0AAAC1B846F060010265C /* ESOpenSourceKitTests */,
 				DFB0AA9E1B846F050010265C /* Products */,
 			);
@@ -68,21 +68,21 @@
 		DFB0AA9E1B846F050010265C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFB0AA9D1B846F050010265C /* ESOpenSourceKit.framework */,
-				DFB0AAA81B846F060010265C /* ESOpenSourceKitTests.xctest */,
+				DFB0AA9D1B846F050010265C /* ESOpenSourceLicensesKit.framework */,
+				DFB0AAA81B846F060010265C /* ESOpenSourceLicensesKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFB0AA9F1B846F050010265C /* ESOpenSourceKit */ = {
+		DFB0AA9F1B846F050010265C /* ESOpenSourceLicensesKit */ = {
 			isa = PBXGroup;
 			children = (
-				DFB0AAD81B84725F0010265C /* ESOpenSourceKit.h */,
+				DFB0AAD81B84725F0010265C /* ESOpenSourceLicensesKit.h */,
 				DFB0AAB91B846F210010265C /* Classes */,
 				DFB0AACF1B846F7A0010265C /* Resources */,
 				DFB0AAA01B846F050010265C /* Supporting Files */,
 			);
-			path = ESOpenSourceKit;
+			path = ESOpenSourceLicensesKit;
 			sourceTree = "<group>";
 		};
 		DFB0AAA01B846F050010265C /* Supporting Files */ = {
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DFB0AAAD1B846F060010265C /* Supporting Files */,
-				DFD8D88C1B873C8900A628FD /* ESOpenSourceKitTests.swift */,
+				DFD8D88C1B873C8900A628FD /* ESOpenSourceLicensesKitTests.swift */,
 			);
 			path = ESOpenSourceKitTests;
 			sourceTree = "<group>";
@@ -113,8 +113,8 @@
 		DFB0AAB91B846F210010265C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DFD8D8861B873BD900A628FD /* ESOpenSourceKitView.swift */,
-				DFD8D8871B873BD900A628FD /* ESOpenSourceKitViewController.swift */,
+				DFD8D8861B873BD900A628FD /* ESOpenSourceLicensesView.swift */,
+				DFD8D8871B873BD900A628FD /* ESOpenSourceLicensesViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DFB0AA9C1B846F050010265C /* ESOpenSourceKit */ = {
+		DFB0AA9C1B846F050010265C /* ESOpenSourceLicensesKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFB0AAB31B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceKit" */;
+			buildConfigurationList = DFB0AAB31B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceLicensesKit" */;
 			buildPhases = (
 				DFB0AA981B846F050010265C /* Sources */,
 				DFB0AA991B846F050010265C /* Frameworks */,
@@ -153,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = ESOpenSourceKit;
+			name = ESOpenSourceLicensesKit;
 			productName = ESOpenSourceLicenses;
-			productReference = DFB0AA9D1B846F050010265C /* ESOpenSourceKit.framework */;
+			productReference = DFB0AA9D1B846F050010265C /* ESOpenSourceLicensesKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DFB0AAA71B846F060010265C /* ESOpenSourceKitTests */ = {
+		DFB0AAA71B846F060010265C /* ESOpenSourceLicensesKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFB0AAB61B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceKitTests" */;
+			buildConfigurationList = DFB0AAB61B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceLicensesKitTests" */;
 			buildPhases = (
 				DFB0AAA41B846F060010265C /* Sources */,
 				DFB0AAA51B846F060010265C /* Frameworks */,
@@ -171,9 +171,9 @@
 			dependencies = (
 				DFCC5B371B84987B00EEC8E2 /* PBXTargetDependency */,
 			);
-			name = ESOpenSourceKitTests;
+			name = ESOpenSourceLicensesKitTests;
 			productName = ESOpenSourceLicensesTests;
-			productReference = DFB0AAA81B846F060010265C /* ESOpenSourceKitTests.xctest */;
+			productReference = DFB0AAA81B846F060010265C /* ESOpenSourceLicensesKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFB0AA971B846F050010265C /* Build configuration list for PBXProject "ESOpenSourceKit" */;
+			buildConfigurationList = DFB0AA971B846F050010265C /* Build configuration list for PBXProject "ESOpenSourceLicensesKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -206,8 +206,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFB0AA9C1B846F050010265C /* ESOpenSourceKit */,
-				DFB0AAA71B846F060010265C /* ESOpenSourceKitTests */,
+				DFB0AA9C1B846F050010265C /* ESOpenSourceLicensesKit */,
+				DFB0AAA71B846F060010265C /* ESOpenSourceLicensesKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,8 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD8D8891B873BD900A628FD /* ESOpenSourceKitViewController.swift in Sources */,
-				DFD8D8881B873BD900A628FD /* ESOpenSourceKitView.swift in Sources */,
+				DFD8D8891B873BD900A628FD /* ESOpenSourceLicensesViewController.swift in Sources */,
+				DFD8D8881B873BD900A628FD /* ESOpenSourceLicensesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,9 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD8D88F1B873CBB00A628FD /* ESOpenSourceKitViewController.swift in Sources */,
-				DFD8D88E1B873CBB00A628FD /* ESOpenSourceKitView.swift in Sources */,
-				DFD8D88D1B873C8900A628FD /* ESOpenSourceKitTests.swift in Sources */,
+				DFD8D88F1B873CBB00A628FD /* ESOpenSourceLicensesViewController.swift in Sources */,
+				DFD8D88E1B873CBB00A628FD /* ESOpenSourceLicensesView.swift in Sources */,
+				DFD8D88D1B873C8900A628FD /* ESOpenSourceLicensesKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +256,7 @@
 /* Begin PBXTargetDependency section */
 		DFCC5B371B84987B00EEC8E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DFB0AA9C1B846F050010265C /* ESOpenSourceKit */;
+			target = DFB0AA9C1B846F050010265C /* ESOpenSourceLicensesKit */;
 			targetProxy = DFCC5B361B84987B00EEC8E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -359,10 +359,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ESOpenSourceKit/Info.plist;
+				INFOPLIST_FILE = ESOpenSourceLicensesKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -376,10 +376,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ESOpenSourceKit/Info.plist;
+				INFOPLIST_FILE = ESOpenSourceLicensesKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -388,13 +388,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ESOpenSourceKitTests/Info.plist;
+				INFOPLIST_FILE = ESOpenSourceLicensesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKitTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -403,9 +407,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = ESOpenSourceKitTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ESOpenSourceLicensesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKitTests;
 			};
 			name = Release;
 		};
@@ -463,10 +471,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ESOpenSourceKit/Info.plist;
+				INFOPLIST_FILE = ESOpenSourceLicensesKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -476,13 +484,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ESOpenSourceKitTests/Info.plist;
+				INFOPLIST_FILE = ESOpenSourceLicensesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ESOpenSourceLicensesKitTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Tests;
@@ -490,7 +502,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFB0AA971B846F050010265C /* Build configuration list for PBXProject "ESOpenSourceKit" */ = {
+		DFB0AA971B846F050010265C /* Build configuration list for PBXProject "ESOpenSourceLicensesKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFB0AAB11B846F060010265C /* Debug */,
@@ -500,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFB0AAB31B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceKit" */ = {
+		DFB0AAB31B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceLicensesKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFB0AAB41B846F060010265C /* Debug */,
@@ -510,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFB0AAB61B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceKitTests" */ = {
+		DFB0AAB61B846F060010265C /* Build configuration list for PBXNativeTarget "ESOpenSourceLicensesKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFB0AAB71B846F060010265C /* Debug */,

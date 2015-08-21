@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DFB0AA9C1B846F050010265C"
-               BuildableName = "ESOpenSourceKit.framework"
-               BlueprintName = "ESOpenSourceKit"
-               ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+               BuildableName = "ESOpenSourceLicensesKit.framework"
+               BlueprintName = "ESOpenSourceLicensesKit"
+               ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DFB0AAA71B846F060010265C"
-               BuildableName = "ESOpenSourceKitTests.xctest"
-               BlueprintName = "ESOpenSourceKitTests"
-               ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+               BuildableName = "ESOpenSourceLicensesKitTests.xctest"
+               BlueprintName = "ESOpenSourceLicensesKitTests"
+               ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DFB0AAA71B846F060010265C"
-               BuildableName = "ESOpenSourceKitTests.xctest"
-               BlueprintName = "ESOpenSourceKitTests"
-               ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+               BuildableName = "ESOpenSourceLicensesKitTests.xctest"
+               BlueprintName = "ESOpenSourceLicensesKitTests"
+               ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DFB0AA9C1B846F050010265C"
-            BuildableName = "ESOpenSourceKit.framework"
-            BlueprintName = "ESOpenSourceKit"
-            ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+            BuildableName = "ESOpenSourceLicensesKit.framework"
+            BlueprintName = "ESOpenSourceLicensesKit"
+            ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DFB0AA9C1B846F050010265C"
-            BuildableName = "ESOpenSourceKit.framework"
-            BlueprintName = "ESOpenSourceKit"
-            ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+            BuildableName = "ESOpenSourceLicensesKit.framework"
+            BlueprintName = "ESOpenSourceLicensesKit"
+            ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DFB0AA9C1B846F050010265C"
-            BuildableName = "ESOpenSourceKit.framework"
-            BlueprintName = "ESOpenSourceKit"
-            ReferencedContainer = "container:ESOpenSourceKit.xcodeproj">
+            BuildableName = "ESOpenSourceLicensesKit.framework"
+            BlueprintName = "ESOpenSourceLicensesKit"
+            ReferencedContainer = "container:ESOpenSourceLicensesKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

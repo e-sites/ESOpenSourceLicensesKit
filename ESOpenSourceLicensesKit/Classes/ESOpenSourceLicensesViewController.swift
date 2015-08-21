@@ -1,6 +1,6 @@
 //
-//  ESOpenSourceKitViewController.swift
-//  ESOpenSourceKit
+//  ESOpenSourceLicensesViewController.swift
+//  ESOpenSourceLicensesKit
 //
 //  Created by Bas van Kuijck on 19-08-15.
 //  Copyright © 2015 e-sites. All rights reserved.
@@ -9,16 +9,33 @@
 import Foundation
 import UIKit
 
-public class ESOpenSourceKitViewController : UIViewController {
+/**
+ A UIViewController that is wrapped around a `ESOpenSourceLicensesView` instance
+*/
+public class ESOpenSourceLicensesViewController : UIViewController {
     
     // MARK: - Constructor
     // ____________________________________________________________________________________________________________________
     
-    convenience init() {
+    /**
+     A convenience initializer
+     This will invoke init(nibName:, bundle:)
+    
+     - returns a ESOpenSourceLicensesViewController instance
+    */
+    public convenience init() {
         self.init(nibName: nil, bundle: nil)
         _init()
     }
     
+
+    /**
+    Returns an object initialized from data in a given unarchiver.
+    
+    - parameter: aDecoder	An unarchiver object.
+    
+    - returns:  `self`, initialized using the data in decoder.
+    */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         _init()
@@ -30,7 +47,7 @@ public class ESOpenSourceKitViewController : UIViewController {
     }
     
     private func _init() {
-        self.view = ESOpenSourceKitView()
+        self.view = ESOpenSourceLicensesView()
         self.title = NSLocalizedString("Open Source Licenses", comment: "Open Source Licenses View controller title")
     }
     
@@ -38,16 +55,15 @@ public class ESOpenSourceKitViewController : UIViewController {
     // ____________________________________________________________________________________________________________________
     
     /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	A ESOpenSourceKitView
-    *
-    *	@since 1.0
-    *	@date 18/08/2015
+     The `view` aka `ESOpenSourceLicensesView`
+    
+     - author: Bas van Kuijck <bas@e-sites.nl>
+     - since: 1.0
+     - date: 18/08/2015
     */
-    var openSourceLicensesView:ESOpenSourceKitView {
+    public var openSourceLicensesView:ESOpenSourceLicensesView {
         get {
-            return self.view as! ESOpenSourceKitView
+            return self.view as! ESOpenSourceLicensesView
         }
     }
 }
