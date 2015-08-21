@@ -33,8 +33,7 @@ public class ESOpenSourceKitView : UIWebView {
         self.dataDetectorTypes = .None
         reload()
     }
-    
-    
+        
     // MARK: - Style
     // ____________________________________________________________________________________________________________________
     /**
