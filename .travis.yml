@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode6.4
-xcode_project: ESOpenSourceKit.xcodeproj
-xcode_scheme: ESOpenSourceKit
+xcode_project: ESOpenSourceLicensesKit.xcodeproj
+xcode_scheme: ESOpenSourceLicensesKit
 xcode_sdk: iphonesimulator8.4
 
 # blacklist
