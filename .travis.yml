@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode6.4
+xcode_project: ESOpenSourceKit.xcodeproj
+xcode_scheme: ESOpenSourceKit
+xcode_sdk: iphonesimulator8.4
+
+# blacklist
+branches:
+  except:
+    - swift-2.0
