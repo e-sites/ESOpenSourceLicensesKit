@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = "ESOpenSourceKit"
-  s.version        = "1.2"
+  s.version        = "1.3"
   s.platform       = :ios, "8.0"
   s.summary        = "A bash script to generate an HTML file of all the license files used with your CocoaPods Project"
   s.author         = { "Bas van Kuijck" => "bas@e-sites.nl" }
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Swift' do |sp|
     sp.dependency 'ESOpenSourceKit/Core'
-    sp.source_files  = "#{s.name}/Classes/swift/*.{swift}"
+    sp.source_files  = "#{s.name}/Classes/*.{swift}"
   end
 end
