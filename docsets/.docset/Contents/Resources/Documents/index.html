@@ -12,7 +12,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (87% documented)</p>
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
         <p class="header-right"><a href=""><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -30,10 +30,10 @@
           <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/ESOpenSourceKitView.html">ESOpenSourceKitView</a>
+                <a href="Classes/ESOpenSourceLicensesView.html">ESOpenSourceLicensesView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ESOpenSourceKitViewController.html">ESOpenSourceKitViewController</a>
+                <a href="Classes/ESOpenSourceLicensesViewController.html">ESOpenSourceLicensesViewController</a>
               </li>
             </ul>
           </li>
@@ -43,16 +43,16 @@
         <section>
           <section class="section">
             
-            <p><a href="https://travis-ci.org/e-sites/ESOpenSourceKit"><img src="https://travis-ci.org/e-sites/ESOpenSourceKit.svg" alt="Build"></a>
-<a href="http://cocoadocs.org/docsets/ESOpenSourceKit"><img src="https://cocoapod-badges.herokuapp.com/p/ESOpenSourceKit/badge.png" alt="Platform"></a>
-<a href="http://cocoadocs.org/docsets/ESOpenSourceKit"><img src="https://cocoapod-badges.herokuapp.com/v/ESOpenSourceKit/badge.png" alt="Version"></a>
-<a href="https://cocoapods.org/pods/ESOpenSourceKit/quality"><img src="https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceKit/badge.svg?001" alt="Quality"></a></p>
-<a href='#esopensourcekit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='esopensourcekit'>ESOpenSourceKit</h1>
+            <p><a href="https://travis-ci.org/e-sites/ESOpenSourceLicensesKit"><img src="https://travis-ci.org/e-sites/ESOpenSourceLicensesKit.svg" alt="Build"></a>
+<a href="http://cocoadocs.org/docsets/ESOpenSourceLicensesKit"><img src="https://cocoapod-badges.herokuapp.com/p/ESOpenSourceLicensesKit/badge.png" alt="Platform"></a>
+<a href="http://cocoadocs.org/docsets/ESOpenSourceLicensesKit"><img src="https://cocoapod-badges.herokuapp.com/v/ESOpenSourceLicensesKit/badge.png" alt="Version"></a>
+<a href="https://cocoapods.org/pods/ESOpenSourceLicensesKit/quality"><img src="https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceLicensesKit/badge.svg?002" alt="Quality"></a></p>
+<a href='#esopensourcelicenseskit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='esopensourcelicenseskit'>ESOpenSourceLicensesKit</h1>
 
 <p>A bash script to automatically generate an HTML file of all the license files used with your CocoaPods Project</p>
 <a href='#example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example'>Example</h2>
 
-<p>See <a href="http://htmlpreview.github.io/?https://github.com/e-sites/ESOpenSourceKit/blob/master/Example/example-output.html">example-output.html</a> for an example output</p>
+<p>See <a href="http://htmlpreview.github.io/?https://github.com/e-sites/ESOpenSourceLicensesKit/blob/master/Example/example-output.html">example-output.html</a> for an example output</p>
 
 <p><img src="Assets/pod-update.gif" alt=""> <img src="Assets/example.gif" alt=""> </p>
 <a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
@@ -60,19 +60,19 @@
 <a href='#swift' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='swift'>Swift</h4>
 
 <p>Add the following lines to your PodFile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'ESOpenSourceKit'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'ESOpenSourceLicensesKit'</span>
 
 <span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
-   <span class="nb">system</span><span class="p">(</span><span class="s2">"sh Pods/ESOpenSourceKit/ESOpenSourceKit/Scripts/generate_licenses.sh"</span><span class="p">)</span>
+   <span class="nb">system</span><span class="p">(</span><span class="s2">"sh Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Scripts/generate_licenses.sh"</span><span class="p">)</span>
 <span class="k">end</span>
 </code></pre>
 
 <p>Run <code>pod update</code> or <code>pod install</code></p>
 
-<p>And then open a <code>ESOpenSourceKitViewController</code>:</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ESOpenSourceKit</span>
+<p>And then open a <code>ESOpenSourceLicensesViewController</code>:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ESOpenSourceLicensesKit</span>
 
-<span class="k">let</span> <span class="nv">vc</span> <span class="o">=</span> <span class="kt">ESOpenSourceKitViewController</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">vc</span> <span class="o">=</span> <span class="kt">ESOpenSourceLicensesViewController</span><span class="p">()</span>
 <span class="k">let</span> <span class="nv">navvc</span> <span class="o">=</span> <span class="kt">UINavigationController</span><span class="p">(</span><span class="nv">rootViewController</span><span class="p">:</span> <span class="n">vc</span><span class="p">)</span>
 <span class="k">self</span><span class="o">.</span><span class="nf">presentViewController</span><span class="p">(</span><span class="n">navvc</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
 
@@ -81,10 +81,10 @@
 <a href='#objective_c_not_recommended' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='objective_c_not_recommended'>Objective-c (not recommended)</h4>
 
 <p>Add the following lines to your PodFile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'ESOpenSourceKit'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'ESOpenSourceLicensesKit'</span>
 
 <span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
-   <span class="nb">system</span><span class="p">(</span><span class="s2">"sh Pods/ESOpenSourceKit/ESOpenSourceKit/Scripts/generate_licenses.sh"</span><span class="p">)</span>
+   <span class="nb">system</span><span class="p">(</span><span class="s2">"sh Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Scripts/generate_licenses.sh"</span><span class="p">)</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -92,10 +92,10 @@
 
 <p>Make a swift / objc bridge.</p>
 
-<p>And then open a <code>ESOpenSourceKitViewController</code>:</p>
-<pre class="highlight plaintext"><code>#import &lt;ESOpenSourceKitViewController.h&gt;
+<p>And then open a <code>ESOpenSourceLicensesViewController</code>:</p>
+<pre class="highlight plaintext"><code>#import &lt;ESOpenSourceLicensesViewController.h&gt;
 
-ESOpenSourceKitViewController *vc = [ESOpenSourceKitViewController new];
+ESOpenSourceLicensesViewController *vc = [ESOpenSourceLicensesViewController new];
 UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:vc];
 [self presentViewController:navVc animated:YES completion:nil];
 </code></pre>
@@ -111,13 +111,13 @@ sh ./generate_licenses.sh licenses.html
 <a href='#customization' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='customization'>Customization</h2>
 
 <ul>
-<li>See <a href="http://cocoadocs.org/docsets/ESOpenSourceKit/1.2/Classes/ESOpenSourceKit.html">Cocoadocs</a></li>
+<li>See <a href="http://e-sites.github.io/ESOpenSourceLicensesKit/Classes.html">e-sites.github.io/ESOpenSourceLicensesKit</a></li>
 </ul>
 <a href='#todo' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo'>Todo</h2>
 
 <ul>
 <li>[x] CocoaPods</li>
-<li>[x] Customization of the <code>ESOpenSourceKit</code></li>
+<li>[x] Customization of the <code>ESOpenSourceLicensesKit</code></li>
 <li>[x] Swift 1.2</li>
 <li>[x] Swift 2.0</li>
 <li>[ ] A .plist file of all the licenses</li>
