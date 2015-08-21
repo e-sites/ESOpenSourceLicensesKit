@@ -22,8 +22,8 @@ public class ESOpenSourceKitView : UIWebView {
         super.init(frame: frame)
         _init()
     }
-    
-    public required init(coder aDecoder: NSCoder) {
+
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         _init()
     }
@@ -140,7 +140,7 @@ public class ESOpenSourceKitView : UIWebView {
         var bundle:NSBundle? = nil
         #if TESTS
             bundle = NSBundle(forClass: self.dynamicType)
-        #else
+            #else
             // Try to find ESOpenSourceKit.bundle
             let ar = [ "Frameworks", "ESOpenSourceKit.framework", "ESOpenSourceKit" ]
             var bundlePath:String? = nil
@@ -157,23 +157,27 @@ public class ESOpenSourceKitView : UIWebView {
             bundle = NSBundle(path: bundlePath!)
         #endif
         
+        
         let path = bundle!.pathForResource("opensource-licenses", ofType: "html")!
-        let contents = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error:nil)
-        let regex = NSRegularExpression(pattern: "<style>.+?</style>", options: .CaseInsensitive, error: nil)
-        
-        let bgRGB = _rgbaFromUIColor(self.backgroundColor!)
-        let blockRGB = _rgbaFromUIColor(self.licenseBackgroundColor)
-        let borderRGB = _rgbaFromUIColor(self.licenseBorderColor)
-        let headerTextRGB = _rgbaFromUIColor(self.headerTextColor)
-        let licenseTextRGB = _rgbaFromUIColor(self.licenseTextColor)
-        
-        let template = NSString(format: "<style> body { background-color: %@; margin:%.0fpx; } p { font-family:'%@'; margin-bottom:10px; display:block; background-color:%@; border:%.0fpx solid %@; font-size:%.0fpx; padding:5px; color:%@; } h2 { font-family: '%@'; font-size:%.0fpx; color:%@; } </style>",
-            bgRGB, self.padding,
-            self.licenseFont.fontName, blockRGB, self.licenseBorderWidth, borderRGB, self.licenseFont.pointSize, licenseTextRGB,
-            self.headerFont.fontName, self.headerFont.pointSize, headerTextRGB)
-        
-        let modifiedString = regex!.stringByReplacingMatchesInString(contents as! String, options: .WithoutAnchoringBounds, range: NSMakeRange(0, contents!.length), withTemplate: template as String)
-        self.loadHTMLString(modifiedString, baseURL: nil)
+        do {
+            let contents = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .CaseInsensitive)
+            
+            let bgRGB = _rgbaFromUIColor(self.backgroundColor!)
+            let blockRGB = _rgbaFromUIColor(self.licenseBackgroundColor)
+            let borderRGB = _rgbaFromUIColor(self.licenseBorderColor)
+            let headerTextRGB = _rgbaFromUIColor(self.headerTextColor)
+            let licenseTextRGB = _rgbaFromUIColor(self.licenseTextColor)
+            
+            let template = NSString(format: "<style> body { background-color: %@; margin:%.0fpx; } p { font-family:'%@'; margin-bottom:10px; display:block; background-color:%@; border:%.0fpx solid %@; font-size:%.0fpx; padding:5px; color:%@; } h2 { font-family: '%@'; font-size:%.0fpx; color:%@; } </style>",
+                bgRGB, self.padding,
+                self.licenseFont.fontName, blockRGB, self.licenseBorderWidth, borderRGB, self.licenseFont.pointSize, licenseTextRGB,
+                self.headerFont.fontName, self.headerFont.pointSize, headerTextRGB)
+            
+            let modifiedString = regex.stringByReplacingMatchesInString(contents as String, options: .WithoutAnchoringBounds, range: NSMakeRange(0, contents.length), withTemplate: template as String)
+            self.loadHTMLString(modifiedString, baseURL: nil)
+            
+        } catch { }
     }
     
     // MARK: - Helpers

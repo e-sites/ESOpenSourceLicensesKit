@@ -1,5 +1,5 @@
 //
-//  ESOpenSourceKitViewViewController.swift
+//  ESOpenSourceKitViewController.swift
 //  ESOpenSourceKit
 //
 //  Created by Bas van Kuijck on 19-08-15.
@@ -16,9 +16,10 @@ public class ESOpenSourceKitViewController : UIViewController {
     
     convenience init() {
         self.init(nibName: nil, bundle: nil)
+        _init()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         _init()
     }
