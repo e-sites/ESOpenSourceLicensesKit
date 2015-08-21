@@ -78,7 +78,7 @@ sh ./generate_licenses.sh licenses.html
 Then drag/drop the licenses.html file to your project and you can use it to load in a `UIWebView`
 
 ## Customization
-- See [e-sites.github.io/ESOpenSourceKit](http://e-sites.github.io/ESOpenSourceKit/)
+- See [e-sites.github.io/ESOpenSourceKit](http://e-sites.github.io/ESOpenSourceKit/Classes.html)
 
 
 ## Todo
