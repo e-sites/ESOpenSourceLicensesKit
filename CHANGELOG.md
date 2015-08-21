@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file. `ESOpenSour
 
 ---
 
+## [1.3.2](https://github.com/e-sites/ESOpenSourceKit/releases/tag/1.3.2) / 2015-08-21
+- (Again) improved inline documentation
+
 ## [1.3.1](https://github.com/e-sites/ESOpenSourceKit/releases/tag/1.3.1) / 2015-08-21
 - Improved inline documentation
 - Added Objc support
