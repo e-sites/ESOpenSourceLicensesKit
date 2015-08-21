@@ -40,6 +40,32 @@ self.presentViewController(navvc, animated: true) { _ in
 }
 ```
 
+#### Objective-c (not recommended)
+Add the following lines to your PodFile:
+
+```ruby
+pod 'ESOpenSourceKit'
+
+post_install do |installer_representation|
+   system("sh Pods/ESOpenSourceKit/ESOpenSourceKit/Scripts/generate_licenses.sh")
+end
+```
+
+Run `pod update` or `pod install`
+
+Make a swift / objc bridge.
+
+And then open a `ESOpenSourceKitViewController`:
+
+```objective-c
+#import <ESOpenSourceKitViewController.h>
+
+ESOpenSourceKitViewController *vc = [ESOpenSourceKitViewController new];
+UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:vc];
+[self presentViewController:navVc animated:YES completion:nil];
+```
+
+
 ### Manual 
 Remember that the project depends on CocoaPods. Because it searches for LICENSE files within the `Pods` directory.
 But if you prefer not to use this pod, you can manually call the bash script from your terminal:

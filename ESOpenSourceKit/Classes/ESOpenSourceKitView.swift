@@ -36,105 +36,89 @@ public class ESOpenSourceKitView : UIWebView {
         
     // MARK: - Style
     // ____________________________________________________________________________________________________________________
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The font to be used for the headers
-    *  Default: Helvetica Neue; 16pt
-    *
-    *	@since 1.1
-    *	@date 18/08/2015
-    */
     
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The font to be used for the headers
+    ///  Default: Helvetica Neue; 16pt
+    ///
+    ///	@since 1.1
+    ///	@date 18/08/2015
     var headerFont = UIFont(name: "HelveticaNeue", size: 16)!
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The font to be used for the license text
-    *  Default: Menlo; 12pt
-    *
-    *	@since 1.1
-    *	@date 18/08/2015
-    */
+    
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The font to be used for the license text
+    ///  Default: Menlo; 12pt
+    ///
+    ///	@since 1.1
+    ///	@date 18/08/2015
     var licenseFont = UIFont(name: "Menlo-Regular", size: 12)!
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The text color of the headers
-    *  Default: Black
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The text color of the headers
+    ///  Default: Black
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     var headerTextColor:UIColor = UIColor.blackColor()
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The text color of the license text
-    *  Default: Black
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The text color of the license text
+    ///  Default: Black
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     var licenseTextColor = UIColor.blackColor()
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The backgroundcolor of the license text
-    *  Default: #EEE
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The backgroundcolor of the license text
+    ///  Default: #EEE
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     var licenseBackgroundColor = UIColor(white: 0.9333, alpha: 1.0)
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The border color of the license text
-    *  Default: #DDD
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+
+    
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The border color of the license text
+    ///  Default: #DDD
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     var licenseBorderColor = UIColor(white: 0.8666, alpha: 1.0)
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The width of the border of the license text
-    *  Default 1.0
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The width of the border of the license text
+    ///  Default 1.0
+    ///	@since 1.1
+    ///	@date 19/08/2015
     var licenseBorderWidth:CGFloat = 1.0
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	The padding in the view
-    *  Default 10.0
-    *
-    *	@since 1.2
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	The padding in the view
+    ///  Default 10.0
+    ///
+    ///	@since 1.2
+    ///	@date 19/08/2015
     var padding:CGFloat = 10.0
     
     // MARK: - Reloading
     // ____________________________________________________________________________________________________________________
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	Reloads the license text
-    *  This should be done after a style attribute is changed
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	Reloads the license text
+    ///  This should be done after a style attribute is changed
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     override public func reload() {
         var bundle:NSBundle? = nil
         #if TESTS
@@ -177,18 +161,17 @@ public class ESOpenSourceKitView : UIWebView {
     
     // MARK: - Helpers
     // ____________________________________________________________________________________________________________________
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	Helper function to convert a UIColor to an @"rgba()" string
-    *
-    *	@param color	UIColor
-    *
-    *	@return NSString*
-    *
-    *	@since 1.1
-    *	@date 19/08/2015
-    */
+    
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	Helper function to convert a UIColor to an @"rgba()" string
+    ///
+    ///	@param color	UIColor
+    ///
+    ///	@return NSString*
+    ///
+    ///	@since 1.1
+    ///	@date 19/08/2015
     
     private func _rgbaFromUIColor(color: UIColor) -> NSString {
         var red:CGFloat = 0

@@ -36,14 +36,12 @@ public class ESOpenSourceKitViewController : UIViewController {
     // MARK: - Properties
     // ____________________________________________________________________________________________________________________
     
-    /**
-    *	@author Bas van Kuijck <bas@e-sites.nl>
-    *
-    *	A ESOpenSourceKitView
-    *
-    *	@since 1.0
-    *	@date 18/08/2015
-    */
+    ///	@author Bas van Kuijck <bas@e-sites.nl>
+    ///
+    ///	A ESOpenSourceKitView
+    ///
+    ///	@since 1.0
+    ///	@date 18/08/2015
     var openSourceLicensesView:ESOpenSourceKitView {
         get {
             return self.view as! ESOpenSourceKitView
