@@ -27,6 +27,13 @@ public class ESOpenSourceLicensesViewController : UIViewController {
         self.init(nibName: nil, bundle: nil)
     }
     
+    /**
+    Returns an object initialized from data in a given unarchiver.
+    
+    - parameter: aDecoder	An unarchiver object.
+    
+    - returns:  `self`, initialized using the data in decoder.
+    */
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         _init()

@@ -12,11 +12,17 @@ import XCTest
 
 class ESOpenSourceLicensesKitTests : XCTestCase {
 
+    /**
+    Test if the ESOpenSourceLicensesViewController works
+    */
     func testViewController() {
         let vc = ESOpenSourceLicensesViewController()
         XCTAssertNotNil(vc.openSourceLicensesView)
     }
     
+    /**
+    Test if ESOpenSourceLicensesView works
+    */
     func testView() {
         let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
@@ -33,7 +39,10 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
         }
     }
     
-    func testColors() {
+    /**
+    Test ESOpenSourceLicensesView colors and appearance
+    */
+    func testViewStyle() {
         let v = ESOpenSourceLicensesView()
         var rgba = _rgbaFromUIColor(v.backgroundColor!)
         XCTAssertNotNil(rgba)

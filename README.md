@@ -1,7 +1,7 @@
 [![Build](https://travis-ci.org/e-sites/ESOpenSourceLicensesKit.svg)](https://travis-ci.org/e-sites/ESOpenSourceLicensesKit)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/ESOpenSourceLicensesKit/badge.png)](http://cocoadocs.org/docsets/ESOpenSourceLicensesKit)
 [![Version](https://cocoapod-badges.herokuapp.com/v/ESOpenSourceLicensesKit/badge.png)](http://cocoadocs.org/docsets/ESOpenSourceLicensesKit)
-[![Quality](https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceLicensesKit/badge.svg?001)](https://cocoapods.org/pods/ESOpenSourceLicensesKit/quality)
+[![Quality](https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceLicensesKit/badge.svg?002)](https://cocoapods.org/pods/ESOpenSourceLicensesKit/quality)
 
 # ESOpenSourceLicensesKit
 A bash script to automatically generate an HTML file of all the license files used with your CocoaPods Project
