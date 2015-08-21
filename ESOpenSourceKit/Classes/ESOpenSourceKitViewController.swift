@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /**
-    A UIViewController that is wrapped around a `ESOpenSourceKitView` instance
+ A UIViewController that is wrapped around a `ESOpenSourceKitView` instance
 */
 public class ESOpenSourceKitViewController : UIViewController {
     
@@ -18,10 +18,10 @@ public class ESOpenSourceKitViewController : UIViewController {
     // ____________________________________________________________________________________________________________________
     
     /**
-        A convenience initializer
-        This will invoke init(nibName:, bundle:)
+     A convenience initializer
+     This will invoke init(nibName:, bundle:)
     
-        - returns a ESOpenSourceKitViewController instance
+     - returns a ESOpenSourceKitViewController instance
     */
     public convenience init() {
         self.init(nibName: nil, bundle: nil)
@@ -46,11 +46,11 @@ public class ESOpenSourceKitViewController : UIViewController {
     // ____________________________________________________________________________________________________________________
     
     /**
-    	The `view` aka `ESOpenSourceKitView`
+     The `view` aka `ESOpenSourceKitView`
     
-        - author: Bas van Kuijck <bas@e-sites.nl>
-        - since: 1.0
-    	- date: 18/08/2015
+     - author: Bas van Kuijck <bas@e-sites.nl>
+     - since: 1.0
+     - date: 18/08/2015
     */
     public var openSourceLicensesView:ESOpenSourceKitView {
         get {
