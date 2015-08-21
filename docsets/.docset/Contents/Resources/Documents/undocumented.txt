@@ -1,0 +1,4 @@
+ESOpenSourceKitViewController.swift
+	required public init(coder aDecoder: NSCoder)
+ESOpenSourceKitView.swift
+	public required init(coder aDecoder: NSCoder)
