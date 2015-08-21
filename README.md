@@ -1,4 +1,4 @@
-[![Build](https://travis-ci.org/e-sites/ESOpenSourceKit)](https://travis-ci.org/e-sites/ESOpenSourceKit)
+[![Build](https://travis-ci.org/e-sites/ESOpenSourceKit.svg)](https://travis-ci.org/e-sites/ESOpenSourceKit)
 [![Platform](https://cocoapod-badges.herokuapp.com/p/ESOpenSourceKit/badge.png)](http://cocoadocs.org/docsets/ESOpenSourceKit)
 [![Version](https://cocoapod-badges.herokuapp.com/v/ESOpenSourceKit/badge.png)](http://cocoadocs.org/docsets/ESOpenSourceKit)
 [![Quality](https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceKit/badge.svg)](https://cocoapods.org/pods/ESOpenSourceKit/quality)
