@@ -8,7 +8,7 @@ A script to automatically generate an HTML file of all the license files used wi
 
 ## Example
 
-See [example-output.html](http://htmlpreview.github.io/?https://github.com/e-sites/ESOpenSourceLicensesKit/blob/master/Example/example-output.html) for an example output
+See [example-output.html](http://htmlpreview.github.io/?https://github.com/e-sites/ESOpenSourceLicensesKit/blob/master/Examples/example-output.html) for an example output
 
 ![](Assets/pod-update.gif) ![](Assets/example.gif) 
 
