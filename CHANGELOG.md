@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file. `ESOpenSour
 
 ---
 
+## [1.4](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.4) / 2015-08-25
+- Changed from bash script to ruby script
+
 ## [1.3.3](https://github.com/e-sites/ESOpenSourceLicensesKit/releases/tag/1.3.2) / 2015-08-21
 - Renamed to `ESOpenSourceLicensesKit`
 

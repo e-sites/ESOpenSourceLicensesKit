@@ -4,7 +4,7 @@
 [![Quality](https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceLicensesKit/badge.svg?002)](https://cocoapods.org/pods/ESOpenSourceLicensesKit/quality)
 
 # ESOpenSourceLicensesKit
-A bash script to automatically generate an HTML file of all the license files used with your CocoaPods Project
+A script to automatically generate an HTML file of all the license files used with your CocoaPods Project
 
 ## Example
 
@@ -16,18 +16,18 @@ See [example-output.html](http://htmlpreview.github.io/?https://github.com/e-sit
 
 ### Cocoapods
 
-#### Swift
 Add the following lines to your PodFile:
 
 ```ruby
 pod 'ESOpenSourceLicensesKit'
 
 post_install do |installer_representation|
-   system("sh Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Scripts/generate_licenses.sh")
+    system("ruby Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Scripts/generate_licenses.rb --post_install")
 end
 ```
 Run `pod update` or `pod install`
 
+#### Swift
 And then open a `ESOpenSourceLicensesViewController`:
 
 ```swift
@@ -41,17 +41,6 @@ self.presentViewController(navvc, animated: true) { _ in
 ```
 
 #### Objective-c (not recommended)
-Add the following lines to your PodFile:
-
-```ruby
-pod 'ESOpenSourceLicensesKit'
-
-post_install do |installer_representation|
-   system("sh Pods/ESOpenSourceLicensesKit/ESOpenSourceLicensesKit/Scripts/generate_licenses.sh")
-end
-```
-
-Run `pod update` or `pod install`
 
 Make a swift / objc bridge.
 
@@ -78,6 +67,13 @@ sh ./generate_licenses.sh licenses.html
 Then drag/drop the licenses.html file to your project and you can use it to load in a `UIWebView`
 
 ## Customization
+
+```swift
+let openSourceView = ESOpenSourceLicensesView()
+openSourceView.licenseBackgroundColor = UIColor.blackColor()
+openSourceView.licenseTextColor = UIColor.whiteColor()
+```
+
 - See [e-sites.github.io/ESOpenSourceLicensesKit](http://e-sites.github.io/ESOpenSourceLicensesKit/Classes.html)
 
 

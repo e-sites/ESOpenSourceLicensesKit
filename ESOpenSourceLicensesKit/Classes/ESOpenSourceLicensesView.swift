@@ -192,7 +192,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     /**
      Helper function to convert a UIColor to an @"rgba()" string
     
-     - parameter:  color	UIColor
+     - parameter color:	UIColor
     
      - returns: HTML String representation for the color > `rgba(#,#,#,#)`
     
