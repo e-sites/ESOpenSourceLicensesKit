@@ -61,7 +61,7 @@ But if you prefer not to use this pod, you can manually call the bash script fro
 
 ```bash
 cd /Path/to/xcode-workspace/
-sh ./generate_licenses.sh licenses.html
+ruby ./generate_licenses.rb --input licenses.html
 ```
 
 Then drag/drop the licenses.html file to your project and you can use it to load in a `UIWebView`
