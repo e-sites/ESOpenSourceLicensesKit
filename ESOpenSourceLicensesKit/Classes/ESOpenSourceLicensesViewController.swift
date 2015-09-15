@@ -25,8 +25,10 @@ public class ESOpenSourceLicensesViewController : UIViewController {
     */
     public convenience init() {
         self.init(nibName: nil, bundle: nil)
+        _init()
     }
     
+
     /**
     Returns an object initialized from data in a given unarchiver.
     
@@ -34,7 +36,7 @@ public class ESOpenSourceLicensesViewController : UIViewController {
     
     - returns:  `self`, initialized using the data in decoder.
     */
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         _init()
     }

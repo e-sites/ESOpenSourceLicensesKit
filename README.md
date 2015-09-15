@@ -4,6 +4,9 @@
 [![Quality](https://apps.e-sites.nl/cocoapodsquality/ESOpenSourceLicensesKit/badge.svg?002)](https://cocoapods.org/pods/ESOpenSourceLicensesKit/quality)
 
 # ESOpenSourceLicensesKit
+
+*Requires Xcode 7.0 and Swift 2.0*
+
 A script to automatically generate an HTML file of all the license files used with your CocoaPods Project
 
 ## Example

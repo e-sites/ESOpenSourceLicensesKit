@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = "ESOpenSourceLicensesKit"
-  s.version        = "1.4"
+  s.version        = "1.5"
   s.platform       = :ios, "8.0"
   s.summary        = "A script to generate an HTML file of all the license files used with your CocoaPods Project"
   s.author         = { "Bas van Kuijck" => "bas@e-sites.nl" }
