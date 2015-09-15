@@ -157,7 +157,7 @@ public class ESOpenSourceLicensesView : UIWebView {
                 var bundlePath:String? = nil
                 for i in 0...2 {
                     let nar = ar[i...2]
-                    bundlePath = NSBundle.mainBundle().pathForResource("/".join(nar), ofType: "bundle")
+                    bundlePath = NSBundle.mainBundle().pathForResource(nar.joinWithSeparator("/"), ofType: "bundle")
                     if (bundlePath != nil) {
                         break
                     }
@@ -197,7 +197,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     Helper function to convert a UIColor to an @"rgba()" string
     
     - parameter:  color	UIColor
-    
+   
     - returns: HTML String representation for the color > `rgba(#,#,#,#)`
     
     - author: Bas van Kuijck <bas@e-sites.nl>
