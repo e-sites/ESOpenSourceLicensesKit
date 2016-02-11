@@ -17,7 +17,7 @@ See [example-output.html](http://htmlpreview.github.io/?https://github.com/e-sit
 
 ## Usage
 
-### Cocoapods
+### CocoaPods
 
 Add the following lines to your PodFile:
 
