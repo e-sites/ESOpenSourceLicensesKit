@@ -25,7 +25,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - returns a ESOpenSourceLicensesView instance
     */
     public convenience init() {
-        self.init(frame: CGRectZero)
+        self.init(frame: CGRect.zero)
     }
     
     override init(frame: CGRect) {
@@ -46,8 +46,8 @@ public class ESOpenSourceLicensesView : UIWebView {
     }
     
     private func _init() {
-        self.backgroundColor = UIColor.whiteColor()
-        self.dataDetectorTypes = .None
+        self.backgroundColor = UIColor.white()
+        self.dataDetectorTypes = []
         reload()
     }
     
@@ -83,7 +83,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var headerTextColor:UIColor = UIColor.blackColor()
+    public var headerTextColor:UIColor = UIColor.black()
     
     /**
     The text color of the license text
@@ -93,7 +93,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var licenseTextColor = UIColor.blackColor()
+    public var licenseTextColor = UIColor.black()
     
     /**
     The backgroundcolor of the license text
@@ -148,16 +148,16 @@ public class ESOpenSourceLicensesView : UIWebView {
     */
     override public func reload() {
         do {
-            var bundle:NSBundle? = nil
+            var bundle:Bundle? = nil
             #if TESTS
-                bundle = NSBundle(forClass: self.dynamicType)
+                bundle = Bundle(for: self.dynamicType)
                 #else
                 // Try to find ESOpenSourceLicensesKit.bundle
                 let ar = [ "Frameworks", "ESOpenSourceLicensesKit.framework", "ESOpenSourceLicensesKit" ]
                 var bundlePath:String? = nil
                 for i in 0...2 {
                     let nar = ar[i...2]
-                    bundlePath = NSBundle.mainBundle().pathForResource(nar.joinWithSeparator("/"), ofType: "bundle")
+                    bundlePath = Bundle.main.pathForResource(nar.joined(separator: "/"), ofType: "bundle")
                     if (bundlePath != nil) {
                         break
                     }
@@ -165,26 +165,26 @@ public class ESOpenSourceLicensesView : UIWebView {
                 if (bundlePath == nil) {
                     return
                 }
-                bundle = NSBundle(path: bundlePath!)
+                bundle = Bundle(path: bundlePath!)
             #endif
             
             
             let path = bundle!.pathForResource("opensource-licenses", ofType: "html")!
-            let contents = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .CaseInsensitive)
+            let contents = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            let regex = try RegularExpression(pattern: "<style>.+?</style>", options: .caseInsensitive)
             
-            let bgRGB = _rgbaFromUIColor(self.backgroundColor!)
-            let blockRGB = _rgbaFromUIColor(self.licenseBackgroundColor)
-            let borderRGB = _rgbaFromUIColor(self.licenseBorderColor)
-            let headerTextRGB = _rgbaFromUIColor(self.headerTextColor)
-            let licenseTextRGB = _rgbaFromUIColor(self.licenseTextColor)
+            let bgRGB = _rgbaFromUIColor(color: self.backgroundColor!)
+            let blockRGB = _rgbaFromUIColor(color: self.licenseBackgroundColor)
+            let borderRGB = _rgbaFromUIColor(color: self.licenseBorderColor)
+            let headerTextRGB = _rgbaFromUIColor(color: self.headerTextColor)
+            let licenseTextRGB = _rgbaFromUIColor(color: self.licenseTextColor)
             
             let template = NSString(format: "<style> body { background-color: %@; margin:%.0fpx; } p { font-family:'%@'; margin-bottom:10px; display:block; background-color:%@; border:%.0fpx solid %@; font-size:%.0fpx; padding:5px; color:%@; } h2 { font-family: '%@'; font-size:%.0fpx; color:%@; } </style>",
                 bgRGB, self.padding,
                 self.licenseFont.fontName, blockRGB, self.licenseBorderWidth, borderRGB, self.licenseFont.pointSize, licenseTextRGB,
                 self.headerFont.fontName, self.headerFont.pointSize, headerTextRGB)
             
-            let modifiedString = regex.stringByReplacingMatchesInString(contents as String, options: .WithoutAnchoringBounds, range: NSMakeRange(0, contents.length), withTemplate: template as String)
+            let modifiedString = regex.stringByReplacingMatches(in: contents as String, options: .withoutAnchoringBounds, range: NSMakeRange(0, contents.characters.count), withTemplate: template as String)
             self.loadHTMLString(modifiedString, baseURL: nil)
             
         } catch { }
