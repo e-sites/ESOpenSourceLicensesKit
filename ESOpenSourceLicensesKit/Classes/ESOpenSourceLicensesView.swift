@@ -46,7 +46,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     }
     
     private func _init() {
-        self.backgroundColor = UIColor.white()
+        self.backgroundColor = UIColor.white
         self.dataDetectorTypes = []
         reload()
     }
@@ -83,7 +83,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var headerTextColor:UIColor = UIColor.black()
+    public var headerTextColor:UIColor = UIColor.black
     
     /**
     The text color of the license text
@@ -93,7 +93,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var licenseTextColor = UIColor.black()
+    public var licenseTextColor = UIColor.black
     
     /**
     The backgroundcolor of the license text
@@ -150,14 +150,14 @@ public class ESOpenSourceLicensesView : UIWebView {
         do {
             var bundle:Bundle? = nil
             #if TESTS
-                bundle = Bundle(for: self.dynamicType)
+                bundle = Bundle(for: type(of: self))
                 #else
                 // Try to find ESOpenSourceLicensesKit.bundle
                 let ar = [ "Frameworks", "ESOpenSourceLicensesKit.framework", "ESOpenSourceLicensesKit" ]
                 var bundlePath:String? = nil
                 for i in 0...2 {
                     let nar = ar[i...2]
-                    bundlePath = Bundle.main.pathForResource(nar.joined(separator: "/"), ofType: "bundle")
+                    bundlePath = Bundle.main.path(forResource: nar.joined(separator: "/"), ofType: "bundle")
                     if (bundlePath != nil) {
                         break
                     }
@@ -169,9 +169,9 @@ public class ESOpenSourceLicensesView : UIWebView {
             #endif
             
             
-            let path = bundle!.pathForResource("opensource-licenses", ofType: "html")!
+            let path = bundle!.path(forResource: "opensource-licenses", ofType: "html")!
             let contents = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-            let regex = try RegularExpression(pattern: "<style>.+?</style>", options: .caseInsensitive)
+            let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .caseInsensitive)
             
             let bgRGB = _rgbaFromUIColor(color: self.backgroundColor!)
             let blockRGB = _rgbaFromUIColor(color: self.licenseBackgroundColor)

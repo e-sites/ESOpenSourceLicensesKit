@@ -27,15 +27,15 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
         let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
         XCTAssert(v.dataDetectorTypes == [])
-        let expectation = self.expectation(withDescription: "javascript-check")
-        DispatchQueue.main.after(when: .now() + 2) {
+        let expectation = self.expectation(description: "javascript-check")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             var response = v.stringByEvaluatingJavaScript(from: "document.body.innerHTML")
             XCTAssertNotNil(response)
             response = v.stringByEvaluatingJavaScript(from: "document.title")
             XCTAssertEqual(response!, "Open Source Licenses")
             expectation.fulfill()
         }
-        self.waitForExpectations(withTimeout: 3) { _ in
+        self.waitForExpectations(timeout: 3) { _ in
         }
     }
     
