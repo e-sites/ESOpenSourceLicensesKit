@@ -12,7 +12,7 @@ import UIKit
 /**
  A UIViewController that is wrapped around a `ESOpenSourceLicensesView` instance
 */
-public class ESOpenSourceLicensesViewController : UIViewController {
+open class ESOpenSourceLicensesViewController : UIViewController {
     
     // MARK: - Constructor
     // ____________________________________________________________________________________________________________________
@@ -41,12 +41,12 @@ public class ESOpenSourceLicensesViewController : UIViewController {
         _init()
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         _init()
     }
     
-    private func _init() {
+    fileprivate func _init() {
         self.view = ESOpenSourceLicensesView()
         self.title = NSLocalizedString("Open Source Licenses", comment: "Open Source Licenses View controller title")
     }
@@ -61,7 +61,7 @@ public class ESOpenSourceLicensesViewController : UIViewController {
      - since: 1.0
      - date: 18/08/2015
     */
-    public var openSourceLicensesView:ESOpenSourceLicensesView {
+    open var openSourceLicensesView:ESOpenSourceLicensesView {
         get {
             return self.view as! ESOpenSourceLicensesView
         }

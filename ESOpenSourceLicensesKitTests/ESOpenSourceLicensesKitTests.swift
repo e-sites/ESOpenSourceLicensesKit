@@ -26,16 +26,16 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
     func testView() {
         let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
-        XCTAssert(v.dataDetectorTypes == .None)
-        let expectation = self.expectationWithDescription("javascript-check")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-            var response = v.stringByEvaluatingJavaScriptFromString("document.body.innerHTML")
+        XCTAssert(v.dataDetectorTypes == UIDataDetectorTypes())
+        let expectation = self.expectation(description: "javascript-check")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((Int64)(2 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
+            var response = v.stringByEvaluatingJavaScript(from: "document.body.innerHTML")
             XCTAssertNotNil(response)
-            response = v.stringByEvaluatingJavaScriptFromString("document.title")
+            response = v.stringByEvaluatingJavaScript(from: "document.title")
             XCTAssertEqual(response!, "Open Source Licenses")
             expectation.fulfill()
         }
-        self.waitForExpectationsWithTimeout(3) { _ in
+        self.waitForExpectations(timeout: 3) { _ in
         }
     }
     
@@ -67,7 +67,7 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
         XCTAssertGreaterThan(v.licenseBorderWidth, 0)
     }
     
-    private func _rgbaFromUIColor(color: UIColor) -> NSString {
+    fileprivate func _rgbaFromUIColor(_ color: UIColor) -> NSString {
         var red:CGFloat = 0
         var green:CGFloat = 0
         var blue:CGFloat = 0
