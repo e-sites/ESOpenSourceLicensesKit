@@ -45,7 +45,7 @@ htmlContents = "<!DOCTYPE html>
 
 licenseFiles = []
 Find.find(outputDir) do |path|
-  licenseFiles << path if path =~ /LICENSE|COPYING(|.*)$/
+  licenseFiles << path if path =~ /LICENSE|LICENCE|COPYING(|.*)$/
 end
 
 licenseFiles = licenseFiles.sort{ |a,b| a.downcase <=> b.downcase }
