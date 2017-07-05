@@ -25,7 +25,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - returns a ESOpenSourceLicensesView instance
     */
     public convenience init() {
-        self.init(frame: CGRectZero)
+        self.init(frame: CGRect.zero)
     }
     
     override init(frame: CGRect) {
@@ -46,8 +46,8 @@ public class ESOpenSourceLicensesView : UIWebView {
     }
     
     private func _init() {
-        self.backgroundColor = UIColor.whiteColor()
-        self.dataDetectorTypes = .None
+        self.backgroundColor = UIColor.white
+        self.dataDetectorTypes = .none
         reload()
     }
     
@@ -83,7 +83,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var headerTextColor:UIColor = UIColor.blackColor()
+    public var headerTextColor:UIColor = UIColor.black
     
     /**
     The text color of the license text
@@ -93,7 +93,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - since: 1.1
     - date: 19/08/2015
     */
-    public var licenseTextColor = UIColor.blackColor()
+    public var licenseTextColor = UIColor.black
     
     /**
     The backgroundcolor of the license text
@@ -148,16 +148,16 @@ public class ESOpenSourceLicensesView : UIWebView {
     */
     override public func reload() {
         do {
-            var bundle:NSBundle? = nil
+            var bundle:Bundle? = nil
             #if TESTS
-                bundle = NSBundle(forClass: self.dynamicType)
+                bundle = NSBundle(forClass: type(of: self))
                 #else
                 // Try to find ESOpenSourceLicensesKit.bundle
                 let ar = [ "Frameworks", "ESOpenSourceLicensesKit.framework", "ESOpenSourceLicensesKit" ]
                 var bundlePath:String? = nil
                 for i in 0...2 {
                     let nar = ar[i...2]
-                    bundlePath = NSBundle.mainBundle().pathForResource(nar.joinWithSeparator("/"), ofType: "bundle")
+                    bundlePath = Bundle.main.path(forResource: nar.joined(separator: "/"), ofType: "bundle")
                     if (bundlePath != nil) {
                         break
                     }
@@ -165,19 +165,19 @@ public class ESOpenSourceLicensesView : UIWebView {
                 if (bundlePath == nil) {
                     return
                 }
-                bundle = NSBundle(path: bundlePath!)
+                bundle = Bundle(path: bundlePath!)
             #endif
             
             
-            let path = bundle!.pathForResource("opensource-licenses", ofType: "html")!
-            let contents = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .CaseInsensitive)
+            let path = bundle!.path(forResource: "opensource-licenses", ofType: "html")!
+            let contents = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .caseInsensitive)
             
-            let bgRGB = _rgbaFromUIColor(self.backgroundColor!)
-            let blockRGB = _rgbaFromUIColor(self.licenseBackgroundColor)
-            let borderRGB = _rgbaFromUIColor(self.licenseBorderColor)
-            let headerTextRGB = _rgbaFromUIColor(self.headerTextColor)
-            let licenseTextRGB = _rgbaFromUIColor(self.licenseTextColor)
+            let bgRGB = _rgba(fromColor: self.backgroundColor!)
+            let blockRGB = _rgba(fromColor: self.licenseBackgroundColor)
+            let borderRGB = _rgba(fromColor: self.licenseBorderColor)
+            let headerTextRGB = _rgba(fromColor: self.headerTextColor)
+            let licenseTextRGB = _rgba(fromColor: self.licenseTextColor)
             
             let template = NSString(format: "<style> body { background-color: %@; margin:%.0fpx; } p { font-family:'%@'; margin-bottom:10px; display:block; background-color:%@; border:%.0fpx solid %@; font-size:%.0fpx; padding:5px; color:%@; } h2 { font-family: '%@'; font-size:%.0fpx; color:%@; } </style>",
                 bgRGB, self.padding,
@@ -205,7 +205,7 @@ public class ESOpenSourceLicensesView : UIWebView {
     - date: 19/08/2015
     */
     
-    private func _rgbaFromUIColor(color: UIColor) -> NSString {
+    private func _rgba(fromColor color: UIColor) -> NSString {
         var red:CGFloat = 0
         var green:CGFloat = 0
         var blue:CGFloat = 0
