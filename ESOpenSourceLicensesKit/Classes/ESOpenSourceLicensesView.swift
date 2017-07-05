@@ -47,7 +47,6 @@ public class ESOpenSourceLicensesView : UIWebView {
     
     private func _init() {
         self.backgroundColor = UIColor.white
-        self.dataDetectorTypes = .none
         reload()
     }
     
@@ -184,7 +183,7 @@ public class ESOpenSourceLicensesView : UIWebView {
                 self.licenseFont.fontName, blockRGB, self.licenseBorderWidth, borderRGB, self.licenseFont.pointSize, licenseTextRGB,
                 self.headerFont.fontName, self.headerFont.pointSize, headerTextRGB)
             
-            let modifiedString = regex.stringByReplacingMatchesInString(contents as String, options: .WithoutAnchoringBounds, range: NSMakeRange(0, contents.length), withTemplate: template as String)
+            let modifiedString = regex.stringByReplacingMatches(in: contents as String, options: .withoutAnchoringBounds, range: NSMakeRange(0, contents.length), withTemplate: template as String)
             self.loadHTMLString(modifiedString, baseURL: nil)
             
         } catch { }
