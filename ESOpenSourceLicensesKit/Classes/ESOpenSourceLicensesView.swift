@@ -173,11 +173,11 @@ open class ESOpenSourceLicensesView : UIWebView {
             let contents = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             let regex = try NSRegularExpression(pattern: "<style>.+?</style>", options: .caseInsensitive)
             
-            let bgRGB = _rgbaFromUIColor(color: self.backgroundColor!)
-            let blockRGB = _rgbaFromUIColor(color: self.licenseBackgroundColor)
-            let borderRGB = _rgbaFromUIColor(color: self.licenseBorderColor)
-            let headerTextRGB = _rgbaFromUIColor(color: self.headerTextColor)
-            let licenseTextRGB = _rgbaFromUIColor(color: self.licenseTextColor)
+            let bgRGB = _rgba(fromColor: self.backgroundColor!)
+            let blockRGB = _rgba(fromColor: self.licenseBackgroundColor)
+            let borderRGB = _rgba(fromColor: self.licenseBorderColor)
+            let headerTextRGB = _rgba(fromColor: self.headerTextColor)
+            let licenseTextRGB = _rgba(fromColor: self.licenseTextColor)
             
             let template = NSString(format: "<style> body { background-color: %@; margin:%.0fpx; } p { font-family:'%@'; margin-bottom:10px; display:block; background-color:%@; border:%.0fpx solid %@; font-size:%.0fpx; padding:5px; color:%@; } h2 { font-family: '%@'; font-size:%.0fpx; color:%@; } </style>",
                 bgRGB, self.padding,
