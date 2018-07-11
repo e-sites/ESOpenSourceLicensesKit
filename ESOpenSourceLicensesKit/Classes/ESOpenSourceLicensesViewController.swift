@@ -12,7 +12,7 @@ import UIKit
 /**
  A UIViewController that is wrapped around a `ESOpenSourceLicensesView` instance
 */
-public class ESOpenSourceLicensesViewController : UIViewController {
+open class ESOpenSourceLicensesViewController : UIViewController {
     
     // MARK: - Constructor
     // ____________________________________________________________________________________________________________________
