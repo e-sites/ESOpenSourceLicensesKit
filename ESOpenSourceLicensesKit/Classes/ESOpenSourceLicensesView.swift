@@ -205,7 +205,7 @@ open class ESOpenSourceLicensesView : UIWebView {
     - date: 19/08/2015
     */
     
-    private func _rgbaFromUIColor(color: UIColor) -> NSString {
+    private func _rgba(fromColor color: UIColor) -> NSString {
         var red:CGFloat = 0
         var green:CGFloat = 0
         var blue:CGFloat = 0
