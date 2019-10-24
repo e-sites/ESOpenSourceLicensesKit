@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source         = { :git => "https://github.com/e-sites/#{s.name}.git", :tag => s.version.to_s }
   s.screenshot     = "https://raw.githubusercontent.com/e-sites/#{s.name}/master/Assets/example.gif"
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
   s.requires_arc   = true
   s.frameworks    = 'UIKit', 'Foundation'
