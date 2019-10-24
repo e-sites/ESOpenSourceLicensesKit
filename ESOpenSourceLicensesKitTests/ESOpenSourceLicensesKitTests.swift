@@ -26,14 +26,17 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
     func testView() {
         let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
-        XCTAssert(v.dataDetectorTypes == [])
-        let expectation = self.expectation(description: "javascript-check")
+        let innerHTMLCheck = self.expectation(description: "javascript-innerHTML-check")
+        let titleCheck = self.expectation(description: "javascript-title-check")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            var response = v.stringByEvaluatingJavaScript(from: "document.body.innerHTML")
-            XCTAssertNotNil(response)
-            response = v.stringByEvaluatingJavaScript(from: "document.title")
-            XCTAssertEqual(response!, "Open Source Licenses")
-            expectation.fulfill()
+            v.evaluateJavaScript("document.body.innerHTML", completionHandler: { (response, error) in
+                XCTAssertNotNil(response)
+                innerHTMLCheck.fulfill()
+            })
+            v.evaluateJavaScript("document.title") { (response, error) in
+                XCTAssertEqual((response as! String), "Open Source Licenses")
+                titleCheck.fulfill()
+            }
         }
         self.waitForExpectations(timeout: 3) { _ in
         }
