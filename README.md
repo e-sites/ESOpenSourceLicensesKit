@@ -5,7 +5,7 @@
 
 # ESOpenSourceLicensesKit
 
-*Requires Xcode 7.0 and Swift 2.0*
+*Swift 4.0*
 
 A script to automatically generate an HTML file of all the license files used with your CocoaPods Project
 
@@ -84,7 +84,5 @@ openSourceView.licenseTextColor = UIColor.whiteColor()
 
 - [x] CocoaPods
 - [x] Customization of the `ESOpenSourceLicensesKit`
-- [x] Swift 1.2
-- [x] Swift 2.0
 - [ ] A .plist file of all the licenses
 - [ ] An array representation of the license files

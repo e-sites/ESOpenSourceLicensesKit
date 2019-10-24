@@ -26,16 +26,19 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
     func testView() {
         let v = ESOpenSourceLicensesView()
         XCTAssertNotNil(v)
-        XCTAssert(v.dataDetectorTypes == .None)
-        let expectation = self.expectationWithDescription("javascript-check")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-            var response = v.stringByEvaluatingJavaScriptFromString("document.body.innerHTML")
-            XCTAssertNotNil(response)
-            response = v.stringByEvaluatingJavaScriptFromString("document.title")
-            XCTAssertEqual(response!, "Open Source Licenses")
-            expectation.fulfill()
+        let innerHTMLCheck = self.expectation(description: "javascript-innerHTML-check")
+        let titleCheck = self.expectation(description: "javascript-title-check")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            v.evaluateJavaScript("document.body.innerHTML", completionHandler: { (response, error) in
+                XCTAssertNotNil(response)
+                innerHTMLCheck.fulfill()
+            })
+            v.evaluateJavaScript("document.title") { (response, error) in
+                XCTAssertEqual((response as! String), "Open Source Licenses")
+                titleCheck.fulfill()
+            }
         }
-        self.waitForExpectationsWithTimeout(3) { _ in
+        self.waitForExpectations(timeout: 3) { _ in
         }
     }
     
@@ -44,22 +47,22 @@ class ESOpenSourceLicensesKitTests : XCTestCase {
     */
     func testViewStyle() {
         let v = ESOpenSourceLicensesView()
-        var rgba = _rgbaFromUIColor(v.backgroundColor!)
+        var rgba = _rgbaFromUIColor(color: v.backgroundColor!)
         XCTAssertNotNil(rgba)
         
-        rgba = _rgbaFromUIColor(v.licenseTextColor)
+        rgba = _rgbaFromUIColor(color: v.licenseTextColor)
         XCTAssertNotNil(rgba)
         
-        rgba = _rgbaFromUIColor(v.licenseBorderColor)
+        rgba = _rgbaFromUIColor(color: v.licenseBorderColor)
         XCTAssertNotNil(rgba)
         
-        rgba = _rgbaFromUIColor(v.licenseBackgroundColor)
+        rgba = _rgbaFromUIColor(color: v.licenseBackgroundColor)
         XCTAssertNotNil(rgba)
         
-        rgba = _rgbaFromUIColor(v.headerTextColor)
+        rgba = _rgbaFromUIColor(color: v.headerTextColor)
         XCTAssertNotNil(rgba)
         
-        rgba = _rgbaFromUIColor(v.licenseTextColor)
+        rgba = _rgbaFromUIColor(color: v.licenseTextColor)
         XCTAssertNotNil(rgba)
         
         XCTAssertNotNil(v.licenseFont)

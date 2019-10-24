@@ -32,3 +32,6 @@ DerivedData
 
 Carthage/
 docs/
+
+# OSX
+.DS_Store
